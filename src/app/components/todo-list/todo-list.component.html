@@ -1,0 +1,14 @@
+<p>todo-list works!</p>
+<ul>
+  <app-todo-item
+    *ngFor="let todo of todos"
+    [todo]="todo"
+    (newItemEvent)="notifyUser($event)"
+  >
+  </app-todo-item>
+</ul>
+
+<div>
+  <input [(ngModel)]="newTask" type="text" />
+  <button class="btn" (click)="addTask()">add task</button>
+</div>

@@ -1,0 +1,33 @@
+<div class="row">
+  <div class="col s12 m6">
+    <div
+      class="card"
+      [ngClass]="{
+        'blue-grey lighten-3': todo.done === true,
+        'teal darken-2': todo.done === false
+      }"
+    >
+      <div class="card-content white-text">
+        <span class="card-title">
+          <span *ngIf="this.editMode === false">{{ todo.label }}</span>
+          <input
+            class="lighten-1"
+            [(ngModel)]="titleInput"
+            (keydown.enter)="updateTitle()"
+            *ngIf="this.editMode === true"
+            type="text"
+          />
+          <i
+            class="waves-effect small material-icons right"
+            (click)="enterEditMode()"
+            >mode_edit</i
+          >
+        </span>
+        <span>{{ todo.creationDate | date: 'YYYY-MM-dd:HH:mm:ss' }}</span>
+      </div>
+      <div (click)="updateTask()" class="card-action">
+        <a class="btn">Done</a>
+      </div>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,16 @@
+/**
+ * EXERCISES
+ * 
+ *  # Make a List component which can get the todoList as an input parameter and draw the Todo List on the UI.
+ *  # Create a Button for adding a new task to the list
+ *  # Show the label, date of creation and the priority next to it
+ * 
+
+
+---------
+
+
+ * +1#  If an element does not have priority, show a default value instead
+ * +1#  Make the Todo List Reactive - by clicking on an element, it should be deleted
+ * +1#  Make the list sortable by the priority
+ */
